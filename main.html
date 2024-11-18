@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LB3</title>
-    <script src="script.js"></script>
 </head>
 <body>
+    <label for="image-select">Оберіть зображення:</label>
     <select id="image-select">
         <option value="1.jpg">Зображення 1</option>
         <option value="2.jpg">Зображення 2</option>
@@ -19,7 +19,24 @@
         <option value="9.jpg">Зображення 9</option>
     </select>
     
-    <img src="images/img1.jpg" alt="">
-    
+    <img id="display-image" src="images/1.jpg" alt="Selected Image" style="display: block; margin-top: 20px; border: 2px solid black;">
+
+    <p id="original-dimensions">Оригінальні розміри: <br><span id="original-width"></span> x <span id="original-height"></span> пікс</p>
+
+    <div style="margin-top: 20px;">
+        <label for="image-width">Ширина (пікс):</label>
+        <input type="number" id="image-width" value="300"><br>
+
+        <label for="image-height">Висота (пікс):</label>
+        <input type="number" id="image-height" value="240"><br>
+
+        <label for="frame-thickness">Товщина рамки (пікс):</label>
+        <input type="number" id="frame-thickness" value="2"><br>
+
+        <label for="alt-text">Заміщаючий текст:</label>
+        <input type="text" id="alt-text" value="Заміщаючий текст"><br>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
